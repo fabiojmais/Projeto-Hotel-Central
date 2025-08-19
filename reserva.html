@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservar | Hotel Central</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hotel Central</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quartos.html">Quartos</a></li>
+        <li><a href="reserva.html" class="active">Reservar</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content reservation">
+    <h2>Faça sua Reserva</h2>
+    <form id="reservaForm">
+      <label>Nome Completo *</label>
+      <input type="text" name="name" required>
+
+      <label>E-mail *</label>
+      <input type="email" name="email" required>
+
+      <label>Telefone</label>
+      <input type="tel" name="phone">
+
+      <label>Data de Entrada *</label>
+      <input type="date" name="checkin" required>
+
+      <label>Data de Saída *</label>
+      <input type="date" name="checkout" required>
+
+      <label>Tipo de Quarto *</label>
+      <select name="room" required>
+        <option value="">Selecione</option>
+        <option value="casal">Quarto Casal Deluxe</option>
+        <option value="solteiro">Quarto Solteiro Conforto</option>
+        <option value="suite">Suíte Master Premium</option>
+      </select>
+
+      <label>Número de Hóspedes *</label>
+      <input type="number" name="guests" min="1" max="6" required>
+
+      <label>Observações</label>
+      <textarea name="notes" rows="4" placeholder="Ex: Quarto silencioso, andar alto..."></textarea>
+
+      <button type="submit" class="btn-primary">Confirmar Reserva</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hotel Central. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/reserva.js"></script>
+</body>
+</html>
